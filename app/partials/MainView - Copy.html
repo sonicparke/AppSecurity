@@ -1,0 +1,35 @@
+<div class="container" ng-init="InitPage()">
+    <div class="row">
+        <div class="col-md-12" >
+            <div class="row">
+                <alert ng-repeat="alert in alerts" type="alert.type" autoclose="alert.autoclose" autoclosetime="alert.autoclosetime" close="closeAlert($index)">{{alert.msg}}</alert>
+            </div>
+            <div ng-dog-loader ng-show="showLoader"></div>
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                    <li class="clickable" ng-repeat="item in list" ng-click="ShowAppDetails(item)"><i class="fa fa-{{item.Icon}}"></i> {{item.Title}}</li>
+                </ul>
+                </div>
+                <div class="col-md-9">
+                    <ul class="list-unstyled">
+                        <li>App Name: {{appDetails.App}}</li>
+                        <li>SubTitle: {{appDetails.SubTitle}}</li>
+                        <li>Url: {{appDetails.Url}}</li>
+                        <li>Icon: {{appDetails.Icon}}</li>
+                        <li>Group/s
+                            <ul class="list-unstyled">
+                                <li ng-repeat="item in appDetails.ADGroup">
+                                    <span>{{item.Name}}</span>
+                                    <span>{{item.Role}}</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

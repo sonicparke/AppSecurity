@@ -1,0 +1,58 @@
+<div class="container" ng-init="InitPage()">
+    <div class="row">
+        <div class="col-md-12" >
+            <div class="row">
+                <alert ng-repeat="alert in alerts" type="alert.type" autoclose="alert.autoclose" autoclosetime="alert.autoclosetime" close="closeAlert($index)">{{alert.msg}}</alert>
+            </div>
+            <div ng-dog-loader ng-show="showLoader"></div>
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                    <li class="clickable" ng-repeat="item in list" ng-click="ShowAppDetails(item)"><i class="fa fa-{{item.Icon}}"></i> {{item.Title}}</li>
+                </ul>
+                </div>
+                <div class="col-md-9">
+                    <ul class="list-unstyled">
+                        <li><span class="title-list">App Name:</span> {{appDetails.App}}</li>
+                        <li><span class="title-list">SubTitle:</span> {{appDetails.SubTitle}}</li>
+                        <li><span class="title-list">Url:</span> {{appDetails.Url}}</li>
+                        <li><span class="title-list">Icon:</span> {{appDetails.Icon}}  <i class="fa fa-{{appDetails.Icon}}"></i></li>
+                        <!--<li>Group/s-->
+                            <!--<ul class="list-unstyled">-->
+                                <!--<li ng-repeat="item in appDetails.ADGroup">-->
+                                    <!--<span>{{item.Name}}</span>-->
+                                    <!--<span>{{item.Role}}</span>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                    </ul>
+                    <!--<dl class="dl-horizontal text-left">-->
+                        <!--<dt>App Name</dt>-->
+                        <!--<dd>{{appDetails.App}}</dd>-->
+                        <!--<dt>SubTitle</dt>-->
+                        <!--<dd>{{appDetails.SubTitle}}</dd>-->
+                        <!--<dt>Url</dt>-->
+                        <!--<dd>{{appDetails.Url}}</dd>-->
+                        <!--<dt>Icon</dt>-->
+                        <!--<dd>{{appDetails.Icon}}</dd>-->
+                    <!--</dl>-->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Group</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in appDetails.ADGroup">
+                                <td>{{item.Name}}</td>
+                                <td>{{item.Role}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

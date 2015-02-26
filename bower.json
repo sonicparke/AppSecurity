@@ -1,0 +1,29 @@
+{
+  "name": "AppSecurity",
+  "version": "0.1.0",
+  "authors": [
+    "Brad McAlister"
+  ],
+  "description": "AppSecurity Admin Site",
+  "main": "Default.aspx",
+  "license": "MIT",
+  "homepage": "axcapps.harsco.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.17",
+    "restangular": "1.1.3",
+    "angular-ui-router": "~0.2.10",
+    "angular-ui-bootstrap-bower": "~0.11.0",
+    "font-awesome": "~4.2.0",
+    "bootstrap": "~3.1.1",
+    "webfont-opensans": "*",
+    "breezejs": "~1.4.16"
+  }
+}
